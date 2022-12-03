@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giá trị lớn nhất và trung bình của các phần tử trong mảng</title>
+</head>
+<body>
+<script>
+    let number =[2,3,4,1,5]
+    let max = number[0];
+    let index= 0;
+    let sum = 0
+    for (let i = 0; i < number.length ; i++) {
+        sum += number[i]
+        if (number[i] > max){
+            max = number[i]
+            index = i
+        }
+    }
+         medium = sum/number.length
+    document.write('Số lớn nhất là :' + max + ' Và giá trị trung bình là: ' + medium)
+</script>
+</body>
+</html>
