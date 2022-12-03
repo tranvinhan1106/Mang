@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    Bài 1-->
+    <script>
+    let name = ['An','Triều','Trường','Hiếu','Khuê'];
+    let result = name.join();
+    document.write(result)
+    </script>
+<!--    Bài 2-->
+    <script>
+        let num=window.prompt();
+        let str = num.toString();
+        let result = [str[0]];
+        for(let i =1; i<str.length; i++) {
+            if((str[i-1]%2 === 0)&&(str[i]%2 === 0)){
+                result.push('-', str[i]);
+            } else {
+                result.push(str[i]);
+            }
+        }
+     document.write(result.join(''));
+    </script>
+<!--    Bài 3-->
+    <script>
+        let str = prompt('nhập chuỗi vào đây :')
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+        for (let i=0; i<str.length; i++) {
+            if(UPPER.indexOf(str[i]) !== -1) {
+                result.push(str[i].toLowerCase());
+            } else if(LOWER.indexOf(str[i]) !== -1) {
+                result.push(str[i].toUpperCase());
+            } else {
+                result.push(str[i]);
+            }
+        }
+       document.write(result.join(''));
+    </script>
+</body>
+</html>
