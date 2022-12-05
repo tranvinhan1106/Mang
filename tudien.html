@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Tìm từ bạn muốn :</h2>
+    <input type="text" id="Vn" > <input type="button" value="Tìm Kiếm" onclick="seach()">
+    <p> Nghĩa là : <span id="result"></span></p>
+    <script>
+        let tiengviet = ['cười','khóc','buồn','vui','đau khổ','hạnh phúc' ];
+        let tienganh = ['laugh','cry','sad','fun','hurt','happy'];
+        function seach() {
+            let value = document.getElementById('Vn').value ;
+            value2 = tiengviet.indexOf(value)
+            if (value2 < 0) {
+                document.getElementById('result').innerText = 'ko tìm thấy !'
+            } else {
+                document.getElementById('result').innerText = tienganh[value2];
+            }
+        }
+    </script>
+</body>
+</html>
